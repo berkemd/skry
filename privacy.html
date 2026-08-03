@@ -1,0 +1,117 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skry — Privacy Policy</title>
+<style>body{margin:0;background:#14172F;color:#E6E7F5;font:16px/1.7 ui-sans-serif,system-ui}
+main{max-width:44rem;margin:0 auto;padding:3rem 1.5rem 5rem}h1{color:#FFD68C}
+h2{color:#FFD68C;font-size:1.1rem;margin-top:2.2rem}a{color:#FFD68C}
+table{border-collapse:collapse;width:100%;margin:1rem 0}
+td,th{border:1px solid #333A6B;padding:.5rem .7rem;text-align:left;font-size:15px}
+small{color:#B9BCD8}</style></head><body><main>
+<p style="text-align:right"><a href="#tr">Türkçe ↓</a></p>
+<h1>Privacy Policy</h1>
+<p><small>Last updated 2 August 2026 · applies to Skry for iOS</small></p>
+
+<h2>The short version</h2>
+<p><strong>Skry does not collect your data.</strong> There are no accounts, no
+analytics SDKs, no advertising, no trackers. Your sky photos stay on your device.</p>
+
+<h2>Your photos</h2>
+<p>When you take or choose a photo, Skry analyses it <strong>on your device</strong>.
+It measures how much of the frame is sky, the cloud genus, the brightness and
+warmth of the light, and the outline of the largest cloud.</p>
+<p>The photo is stored only in Skry's own storage on your phone, so your journal
+still works. It is never uploaded, and deleting the reading deletes the photo.</p>
+<p>If a photo contains a face, Skry detects that on your device and declines to
+read it.</p>
+
+<h2>What is sent when a reading is generated online</h2>
+<p>Skry can optionally use a language model to write the wording of a reading.
+When it does, this is the entire content of the request:</p>
+<table>
+<tr><th>Sent</th><th>Not sent</th></tr>
+<tr><td>Cloud genus and confidence</td><td>Your photo</td></tr>
+<tr><td>Cloud cover, sky fraction, brightness, warmth</td><td>Your name, email or account</td></tr>
+<tr><td>Outline geometry (circularity, elongation, convexity, lobes)</td><td>Your precise location</td></tr>
+<tr><td>A 64×64 one-bit silhouette of the outline (512 bytes)</td><td>Any device or advertising identifier</td></tr>
+<tr><td>Time of day, moon phase, season</td><td>Contacts, calendar, health data</td></tr>
+<tr><td>A random installation ID, used only for rate limiting</td><td>Anything that identifies you</td></tr>
+</table>
+<p>The silhouette is a black-and-white outline of a cloud. It contains no
+scenery, no people, no readable text and no location. The request body is
+capped at 4 KB by the server — a photograph cannot fit.</p>
+<p>This request is handled by a small relay we operate on Cloudflare Workers,
+which forwards it to Google's Gemini API. Neither stores your photo, because
+neither ever receives it.</p>
+<p>You can turn the online path off entirely in Settings. Skry then generates
+every reading on your device, with no network access at all, and loses no
+functionality.</p>
+
+<h2>Purchases</h2>
+<p>Subscriptions and credits are handled by Apple. Skry never sees your payment
+details. Purchase status is verified on your device using Apple's StoreKit.</p>
+
+<h2>Children</h2>
+<p>Skry is not directed at children under 13 and collects no data from anyone.</p>
+
+<h2>Your rights</h2>
+<p>Because Skry holds no personal data, there is nothing to request, correct or
+export. Deleting the app removes everything it stored, including your journal.</p>
+
+<h2>Contact</h2>
+<p><a href="mailto:brkekahraman@icloud.com">brkekahraman@icloud.com</a></p>
+<p><a href="index.html">← Skry</a></p>
+
+<hr style="border:0;border-top:1px solid #333A6B;margin:3rem 0">
+<h1 id="tr">Gizlilik Politikası</h1>
+<p><small>Son güncelleme 3 Ağustos 2026 · iOS için Skry · Türkçe</small></p>
+
+<h2>Kısa hâli</h2>
+<p><strong>Skry verini toplamaz.</strong> Hesap yok, analitik SDK yok, reklam yok,
+izleyici yok. Gökyüzü fotoğrafların cihazında kalır.</p>
+
+<h2>Fotoğrafların</h2>
+<p>Bir fotoğraf çektiğinde ya da seçtiğinde Skry onu <strong>cihazında</strong>
+çözümler. Karenin ne kadarının gökyüzü olduğunu, bulut cinsini, ışığın
+parlaklığını ve sıcaklığını ve en büyük bulutun sınırını ölçer.</p>
+<p>Fotoğraf yalnızca telefonundaki Skry deposunda saklanır, günlüğün çalışsın diye.
+Hiçbir zaman yüklenmez; okumayı silmek fotoğrafı da siler.</p>
+<p>Fotoğrafta bir yüz varsa Skry bunu cihazında tespit eder ve okumayı reddeder.</p>
+
+<h2>Çevrimiçi okuma üretilirken ne gönderilir</h2>
+<p>Skry, okumanın metnini yazmak için isteğe bağlı olarak bir dil modeli
+kullanabilir. Kullandığında isteğin tamamı şudur:</p>
+<table>
+<tr><th>Gönderilen</th><th>Gönderilmeyen</th></tr>
+<tr><td>Bulut cinsi ve güven değeri</td><td>Fotoğrafın</td></tr>
+<tr><td>Örtü oranı, gök oranı, parlaklık, sıcaklık</td><td>Adın, e-postan ya da hesabın</td></tr>
+<tr><td>Kontur geometrisi (dairesellik, uzunluk, dışbükeylik, lob)</td><td>Kesin konumun</td></tr>
+<tr><td>Konturun 64×64 tek bitlik silueti (512 bayt)</td><td>Cihaz ya da reklam kimliği</td></tr>
+<tr><td>Günün saati, ay evresi, mevsim</td><td>Rehber, takvim, sağlık verisi</td></tr>
+<tr><td>Yalnız hız sınırı için rastgele bir kurulum kimliği</td><td>Seni tanımlayan hiçbir şey</td></tr>
+</table>
+<p>Siluet, bir bulutun siyah-beyaz sınırıdır. İçinde manzara, insan, okunabilir
+metin ya da konum yoktur. İstek gövdesi sunucuda 4 KB ile sınırlıdır — bir
+fotoğraf oraya sığmaz.</p>
+<p>Bu istek, Cloudflare Workers üzerinde işlettiğimiz küçük bir aktarıcı
+tarafından karşılanır ve Google'ın Gemini API'sine iletilir. İkisi de fotoğrafını
+saklamaz, çünkü ikisi de fotoğrafını hiç almaz.</p>
+<p>Çevrimiçi yolu Ayarlar'dan tamamen kapatabilirsin. O zaman Skry her okumayı
+cihazında üretir, hiç ağa çıkmaz ve hiçbir işlev kaybolmaz.</p>
+
+<h2>Satın almalar</h2>
+<p>Abonelikler ve krediler Apple tarafından yönetilir. Skry ödeme bilgilerini
+hiçbir zaman görmez. Satın alma durumu cihazında Apple'ın StoreKit'iyle
+doğrulanır.</p>
+
+<h2>Çocuklar</h2>
+<p>Skry 13 yaşından küçüklere yönelik değildir ve kimseden veri toplamaz.</p>
+
+<h2>Haklarının kullanımı</h2>
+<p>Skry hiçbir kişisel veri tutmadığı için talep edilecek, düzeltilecek ya da
+dışa aktarılacak bir şey yoktur. Uygulamayı silmek, günlüğün dâhil sakladığı her
+şeyi kaldırır.</p>
+
+<h2>İletişim</h2>
+<p><a href="mailto:brkekahraman@icloud.com">brkekahraman@icloud.com</a></p>
+<p><a href="index.html">← Skry</a></p>
+</main></body></html>
