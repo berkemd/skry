@@ -1,128 +1,263 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Skry — Privacy Policy</title>
-<meta name="description" content="Skry privacy policy. Analysis runs on your iPhone; your photograph is never uploaded and there is no account or sign-in.">
-<link rel="canonical" href="https://berkemd.github.io/skry/privacy.html">
-<meta name="theme-color" content="#0e1030">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Skry">
-<meta property="og:title" content="Skry — Privacy Policy">
-<meta property="og:url" content="https://berkemd.github.io/skry/privacy.html">
-<meta property="og:description" content="Skry privacy policy. Analysis runs on your iPhone; your photograph is never uploaded and there is no account or sign-in.">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Skry — Privacy Policy">
-<meta name="twitter:description" content="Skry privacy policy. Analysis runs on your iPhone; your photograph is never uploaded and there is no account or sign-in.">
-<style>body{margin:0;background:#14172F;color:#E6E7F5;font:16px/1.7 ui-sans-serif,system-ui}
-main{max-width:44rem;margin:0 auto;padding:3rem 1.5rem 5rem}h1{color:#FFD68C}
-h2{color:#FFD68C;font-size:1.1rem;margin-top:2.2rem}a{color:#FFD68C}
-table{border-collapse:collapse;width:100%;margin:1rem 0}
-td,th{border:1px solid #333A6B;padding:.5rem .7rem;text-align:left;font-size:15px}
-small{color:#B9BCD8}</style></head><body><main>
-<p style="text-align:right"><a href="#tr">Türkçe ↓</a></p>
-<h1>Privacy Policy</h1>
-<p><small>Last updated 2 August 2026 · applies to Skry for iOS</small></p>
-
-<h2>The short version</h2>
-<p><strong>Skry does not collect your data.</strong> There are no accounts, no
-analytics SDKs, no advertising, no trackers. Your sky photos stay on your device.</p>
-
-<h2>Your photos</h2>
-<p>When you take or choose a photo, Skry analyses it <strong>on your device</strong>.
-It measures how much of the frame is sky, the cloud genus, the brightness and
-warmth of the light, and the outline of the largest cloud.</p>
-<p>The photo is stored only in Skry's own storage on your phone, so your journal
-still works. It is never uploaded, and deleting the reading deletes the photo.</p>
-<p>If a photo contains a face, Skry detects that on your device and declines to
-read it.</p>
-
-<h2>What is sent when a reading is generated online</h2>
-<p>Skry can optionally use a language model to write the wording of a reading.
-When it does, this is the entire content of the request:</p>
-<table>
-<tr><th>Sent</th><th>Not sent</th></tr>
-<tr><td>Cloud genus and confidence</td><td>Your photo</td></tr>
-<tr><td>Cloud cover, sky fraction, brightness, warmth</td><td>Your name, email or account</td></tr>
-<tr><td>Outline geometry (circularity, elongation, convexity, lobes)</td><td>Your precise location</td></tr>
-<tr><td>A 64×64 one-bit silhouette of the outline (512 bytes)</td><td>Any device or advertising identifier</td></tr>
-<tr><td>Time of day, moon phase, season</td><td>Contacts, calendar, health data</td></tr>
-<tr><td>A random installation ID, used only for rate limiting</td><td>Anything that identifies you</td></tr>
-</table>
-<p>The silhouette is a black-and-white outline of a cloud. It contains no
-scenery, no people, no readable text and no location. The request body is
-capped at 4 KB by the server — a photograph cannot fit.</p>
-<p>This request is handled by a small relay we operate on Cloudflare Workers,
-which forwards it to Google's Gemini API. Neither stores your photo, because
-neither ever receives it.</p>
-<p>You can turn the online path off entirely in Settings. Skry then generates
-every reading on your device, with no network access at all, and loses no
-functionality.</p>
-
-<h2>Purchases</h2>
-<p>Subscriptions and credits are handled by Apple. Skry never sees your payment
-details. Purchase status is verified on your device using Apple's StoreKit.</p>
-
-<h2>Children</h2>
-<p>Skry is not directed at children under 13 and collects no data from anyone.</p>
-
-<h2>Your rights</h2>
-<p>Because Skry holds no personal data, there is nothing to request, correct or
-export. Deleting the app removes everything it stored, including your journal.</p>
-
-<h2>Contact</h2>
-<p><a href="mailto:brkekahraman@icloud.com">brkekahraman@icloud.com</a></p>
-<p><a href="index.html">← Skry</a></p>
-
-<hr style="border:0;border-top:1px solid #333A6B;margin:3rem 0">
-<h1 id="tr">Gizlilik Politikası</h1>
-<p><small>Son güncelleme 3 Ağustos 2026 · iOS için Skry · Türkçe</small></p>
-
-<h2>Kısa hâli</h2>
-<p><strong>Skry verini toplamaz.</strong> Hesap yok, analitik SDK yok, reklam yok,
-izleyici yok. Gökyüzü fotoğrafların cihazında kalır.</p>
-
-<h2>Fotoğrafların</h2>
-<p>Bir fotoğraf çektiğinde ya da seçtiğinde Skry onu <strong>cihazında</strong>
-çözümler. Karenin ne kadarının gökyüzü olduğunu, bulut cinsini, ışığın
-parlaklığını ve sıcaklığını ve en büyük bulutun sınırını ölçer.</p>
-<p>Fotoğraf yalnızca telefonundaki Skry deposunda saklanır, günlüğün çalışsın diye.
-Hiçbir zaman yüklenmez; okumayı silmek fotoğrafı da siler.</p>
-<p>Fotoğrafta bir yüz varsa Skry bunu cihazında tespit eder ve okumayı reddeder.</p>
-
-<h2>Çevrimiçi okuma üretilirken ne gönderilir</h2>
-<p>Skry, okumanın metnini yazmak için isteğe bağlı olarak bir dil modeli
-kullanabilir. Kullandığında isteğin tamamı şudur:</p>
-<table>
-<tr><th>Gönderilen</th><th>Gönderilmeyen</th></tr>
-<tr><td>Bulut cinsi ve güven değeri</td><td>Fotoğrafın</td></tr>
-<tr><td>Örtü oranı, gök oranı, parlaklık, sıcaklık</td><td>Adın, e-postan ya da hesabın</td></tr>
-<tr><td>Kontur geometrisi (dairesellik, uzunluk, dışbükeylik, lob)</td><td>Kesin konumun</td></tr>
-<tr><td>Konturun 64×64 tek bitlik silueti (512 bayt)</td><td>Cihaz ya da reklam kimliği</td></tr>
-<tr><td>Günün saati, ay evresi, mevsim</td><td>Rehber, takvim, sağlık verisi</td></tr>
-<tr><td>Yalnız hız sınırı için rastgele bir kurulum kimliği</td><td>Seni tanımlayan hiçbir şey</td></tr>
-</table>
-<p>Siluet, bir bulutun siyah-beyaz sınırıdır. İçinde manzara, insan, okunabilir
-metin ya da konum yoktur. İstek gövdesi sunucuda 4 KB ile sınırlıdır — bir
-fotoğraf oraya sığmaz.</p>
-<p>Bu istek, Cloudflare Workers üzerinde işlettiğimiz küçük bir aktarıcı
-tarafından karşılanır ve Google'ın Gemini API'sine iletilir. İkisi de fotoğrafını
-saklamaz, çünkü ikisi de fotoğrafını hiç almaz.</p>
-<p>Çevrimiçi yolu Ayarlar'dan tamamen kapatabilirsin. O zaman Skry her okumayı
-cihazında üretir, hiç ağa çıkmaz ve hiçbir işlev kaybolmaz.</p>
-
-<h2>Satın almalar</h2>
-<p>Abonelikler ve krediler Apple tarafından yönetilir. Skry ödeme bilgilerini
-hiçbir zaman görmez. Satın alma durumu cihazında Apple'ın StoreKit'iyle
-doğrulanır.</p>
-
-<h2>Çocuklar</h2>
-<p>Skry 13 yaşından küçüklere yönelik değildir ve kimseden veri toplamaz.</p>
-
-<h2>Haklarının kullanımı</h2>
-<p>Skry hiçbir kişisel veri tutmadığı için talep edilecek, düzeltilecek ya da
-dışa aktarılacak bir şey yoktur. Uygulamayı silmek, günlüğün dâhil sakladığı her
-şeyi kaldırır.</p>
-
-<h2>İletişim</h2>
-<p><a href="mailto:brkekahraman@icloud.com">brkekahraman@icloud.com</a></p>
-<p><a href="index.html">← Skry</a></p>
-</main></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy policy — Skry</title>
+    <meta
+      name="description"
+      content="How Skry keeps readings and personal preferences on your iPhone, and what happens when you choose to share."
+    />
+    <link rel="canonical" href="https://berkemd.github.io/skry/privacy.html" />
+    <meta name="theme-color" content="#101727" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Privacy policy — Skry" />
+    <meta
+      property="og:description"
+      content="How Skry keeps readings and personal preferences on your iPhone, and what happens when you choose to share."
+    />
+    <meta
+      property="og:url"
+      content="https://berkemd.github.io/skry/privacy.html"
+    />
+    <meta name="twitter:card" content="summary" />
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #101727;
+        color: #e9edf4;
+        font:
+          17px/1.75 system-ui,
+          sans-serif;
+      }
+      main {
+        max-width: 720px;
+        margin: auto;
+        padding: 64px 24px 80px;
+      }
+      h1 {
+        font:
+          500 clamp(38px, 8vw, 60px) / 1.12 Georgia,
+          serif;
+        letter-spacing: -0.035em;
+        margin: 24px 0;
+      }
+      h2 {
+        font-size: 22px;
+        color: #f3cd7c;
+        margin: 40px 0 12px;
+      }
+      p,
+      li {
+        color: #c5cedd;
+      }
+      a {
+        color: #f3cd7c;
+      }
+      a:focus-visible {
+        outline: 3px solid #fff;
+        outline-offset: 5px;
+      }
+      .eyebrow {
+        font-size: 13px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #f3cd7c;
+      }
+      .lede {
+        font-size: 21px;
+      }
+      .cta {
+        display: inline-block;
+        padding: 12px 22px;
+        border-radius: 12px;
+        background: #f3cd7c;
+        color: #101727;
+        text-decoration: none;
+        font-weight: 650;
+        margin: 12px 0;
+      }
+      .card {
+        padding: 24px;
+        border: 1px solid #354056;
+        border-radius: 20px;
+        margin: 24px 0;
+      }
+      nav {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        margin-top: 48px;
+        border-top: 1px solid #354056;
+        padding-top: 24px;
+        font-size: 15px;
+      }
+      li {
+        margin: 10px 0;
+      }
+      hr {
+        border: 0;
+        border-top: 1px solid #354056;
+        margin: 48px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a href="index.html" class="eyebrow">Skry · Sky readings &amp; journal</a>
+      <h1>Privacy, clearly.</h1>
+      <p>
+        <small>Updated 5 September 2026 · Skry for iOS · Version 1.5</small>
+      </p>
+      <h2>On-device readings</h2>
+      <p>
+        Skry 1.5 analyses photos and writes readings on your iPhone. We do not
+        receive your photos, personal notes, chosen focus or optional zodiac
+        sign. There are no accounts, advertising SDKs or third-party analytics
+        SDKs in the app.
+      </p>
+      <h2>Your journal and preferences</h2>
+      <p>
+        The app stores your sky photos, original reading text, cloud
+        observations and any notes you write in its local storage. Your optional
+        zodiac sign and focus are stored in preferences. A saved reading
+        preserves the inputs and text used at the time; changing your
+        preferences does not rewrite your old entries.
+      </p>
+      <p>
+        You can edit or clear a note, change an observation, remove an optional
+        zodiac sign, or delete journal entries in the app. Deleting the app
+        removes its local data. Depending on your Apple device backup settings,
+        app data may be included in backups managed by Apple; Skry does not
+        operate a separate journal backup service.
+      </p>
+      <h2>When you choose to share</h2>
+      <p>
+        The share preview shows the card that will be sent. It contains your sky
+        photo, selected reading text, date and optional Skry signature. Private
+        journal notes and zodiac preferences are not part of the share payload.
+        Skry renders a new image, rather than sharing your original photo file
+        and its metadata.
+      </p>
+      <p>
+        The system share sheet receives the card and an App Store link. The
+        destination you choose may store or process that content under its own
+        policy. Skry does not post automatically, access your contacts or
+        connect to a social account.
+      </p>
+      <h2>Permissions</h2>
+      <p>
+        The camera is used only to take a sky photo. The system photo picker
+        gives Skry access to the photo you select. Saving a share card can ask
+        permission to add an image to your library. Reminder notifications are
+        optional. Birth date, birth time and location are not requested.
+      </p>
+      <h2>Purchases and diagnostics</h2>
+      <p>
+        Apple handles payments. Skry verifies purchase status with StoreKit and
+        keeps a local credit balance and transaction identifiers to avoid
+        duplicate credit delivery. We do not receive your payment card details.
+        Apple may provide aggregated App Store analytics or diagnostics
+        according to your Apple sharing settings; the app does not add a
+        separate tracking SDK.
+      </p>
+      <h2>Older versions with online configuration</h2>
+      <p>
+        Before 1.5, a configured optional online reading service could send
+        cloud measurements, a small silhouette, time-of-day information and a
+        persistent random installation identifier to a Cloudflare relay and
+        Google's Gemini service. A persistent identifier can link requests. The
+        original photo was not sent. This route is disabled in 1.5, including
+        when an older online preference is still saved.
+      </p>
+      <h2>Support</h2>
+      <p>
+        If you email support, we receive the address, message and any
+        attachments you choose to send so we can respond. Do not include private
+        journal content unless you want to share it for troubleshooting. Contact
+        <a href="mailto:brkekahraman@icloud.com">brkekahraman@icloud.com</a>
+        with privacy questions or requests about support correspondence.
+      </p>
+      <hr />
+      <section lang="tr">
+        <h1>Gizlilik, açıkça.</h1>
+        <p><small>5 Eylül 2026 · iOS için Skry 1.5</small></p>
+        <h2>Cihazda yorum</h2>
+        <p>
+          Skry 1.5 fotoğrafı iPhone'unda çözümler ve yorumu cihazda yazar.
+          Fotoğraflarını, özel notlarını, odağını veya isteğe bağlı burcunu
+          almayız. Uygulamada hesap, reklam SDK'sı veya üçüncü taraf analitik
+          SDK'sı yoktur.
+        </p>
+        <h2>Günlüğün ve tercihlerin</h2>
+        <p>
+          Fotoğraflar, yorumlar, bulut gözlemleri ve notlar yerel depoda
+          tutulur. Burç ve odak tercihlerde saklanır. Eski kayıtlar,
+          oluşturuldukları andaki metni ve girdileri korur. Notunu
+          düzenleyebilir veya silebilir, gözlemini değiştirebilir, burç seçimini
+          kaldırabilir ve günlük kayıtlarını silebilirsin.
+        </p>
+        <p>
+          Uygulamayı silmek yerel verisini kaldırır. Apple yedekleme ayarlarına
+          bağlı olarak uygulama verisi cihaz yedeklerine girebilir; Skry ayrı
+          bir günlük yedekleme hizmeti işletmez.
+        </p>
+        <h2>Paylaşmayı seçtiğinde</h2>
+        <p>
+          Önizlemede gökyüzü fotoğrafı, seçilen yorum metni, tarih ve isteğe
+          bağlı Skry imzası görünür. Özel günlük notları ve burç tercihleri
+          paylaşım girdisine dahil edilmez. Orijinal fotoğraf dosyası ve meta
+          verisi yerine yeni bir kart görseli oluşturulur.
+        </p>
+        <p>
+          Sistem paylaşım ekranı karta ve App Store bağlantısına erişir.
+          Seçtiğin hedef içeriği kendi politikasına göre işleyebilir. Skry
+          kendiliğinden paylaşım yapmaz, rehberine erişmez veya sosyal hesabına
+          bağlanmaz.
+        </p>
+        <h2>İzinler ve satın almalar</h2>
+        <p>
+          Kamera gökyüzü fotoğrafı çekmek içindir. Sistem fotoğraf seçicisi
+          yalnızca seçtiğin fotoğrafı verir. Kartı kaydetmek için arşive görsel
+          ekleme izni istenebilir. Hatırlatmalar isteğe bağlıdır; doğum tarihi,
+          saati ve konum istenmez.
+        </p>
+        <p>
+          Ödemeleri Apple yönetir. Skry, StoreKit ile satın alma durumunu
+          doğrular; aynı krediyi iki kez vermemek için yerel bakiye ve işlem
+          kimliklerini tutar. Ödeme kartı bilgilerini almayız. Apple, paylaşım
+          ayarlarına göre toplu mağaza istatistikleri veya tanılama bilgileri
+          sağlayabilir; uygulama ayrı bir izleme SDK'sı eklemez.
+        </p>
+        <h2>Önceki sürümler</h2>
+        <p>
+          1.5 öncesinde yapılandırılmış isteğe bağlı çevrimiçi hizmet, bulut
+          ölçümlerini, küçük bir silueti, günün saatini ve kalıcı rastgele
+          kurulum kimliğini Cloudflare aktarıcısı üzerinden Google Gemini'ye
+          gönderebilirdi. Kalıcı kimlik istekleri birbirine bağlayabilir.
+          Orijinal fotoğraf gönderilmezdi. Eski tercih açık kalsa da bu yol
+          1.5'te kapalıdır.
+        </p>
+        <h2>Destek</h2>
+        <p>
+          Destek için e-posta gönderirsen yanıt verebilmek için adresini,
+          mesajını ve seçtiğin ekleri alırız. Sorun giderme için paylaşmak
+          istemiyorsan özel günlük içeriğini ekleme. Gizlilik soruları veya
+          destek yazışmalarına ilişkin talepler için
+          <a href="mailto:brkekahraman@icloud.com">brkekahraman@icloud.com</a>.
+        </p>
+      </section>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a><a href="support.html">Support</a
+        ><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a>
+      </nav>
+      <p><small>© 2026 Berke Kahraman</small></p>
+    </main>
+  </body>
+</html>
