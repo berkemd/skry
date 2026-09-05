@@ -1,66 +1,197 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Skry — Cloud Oracle</title>
-<meta name="description" content="Skry reads the clouds above you. Photograph the sky and Skry measures it on your iPhone — the cloud genus, the real outline, and a reading in seven parts. Your photo never leaves your device.">
-<link rel="canonical" href="https://berkemd.github.io/skry/">
-<meta name="theme-color" content="#0e1030">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Skry">
-<meta property="og:title" content="Skry — Cloud Oracle">
-<meta property="og:url" content="https://berkemd.github.io/skry/">
-<meta property="og:description" content="Skry reads the clouds above you. Photograph the sky and Skry measures it on your iPhone — the cloud genus, the real outline, and a reading in seven parts. Your photo never leaves your device.">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Skry — Cloud Oracle">
-<meta name="twitter:description" content="Skry reads the clouds above you. Photograph the sky and Skry measures it on your iPhone — the cloud genus, the real outline, and a reading in seven parts. Your photo never leaves your device.">
-<style>
-:root{--ink:#14172F;--mist:#B9BCD8;--gold:#FFD68C}
-*{box-sizing:border-box}
-body{margin:0;background:linear-gradient(180deg,#0E1030,#232752 60%,#4B3E77);
-     color:#fff;font:17px/1.65 ui-serif,Georgia,serif;-webkit-font-smoothing:antialiased}
-main{max-width:44rem;margin:0 auto;padding:4rem 1.5rem 6rem}
-h1{font-size:2.4rem;margin:0 0 .3rem;letter-spacing:-.01em}
-h2{font-size:1.25rem;margin:2.6rem 0 .6rem;color:var(--gold)}
-p{color:#E6E7F5}
-.lede{color:var(--mist);font-size:1.1rem;margin:0 0 2.4rem}
-ul{color:#E6E7F5;padding-left:1.1rem}
-li{margin:.45rem 0}
-a{color:var(--gold)}
-nav{margin-top:3rem;font:15px/1.6 ui-sans-serif,system-ui;color:var(--mist)}
-nav a{margin-right:1.2rem}
-.card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
-      border-radius:18px;padding:1.1rem 1.3rem;margin:1.2rem 0}
-small{color:var(--mist)}
-</style></head><body><main>
-<h1>Skry</h1>
-<p class="lede">Photograph the sky above you. Skry reads the clouds — on your phone.</p>
-
-<div class="card">
-<strong>Your photo never leaves your device.</strong>
-<p style="margin:.5rem 0 0"><small>Skry measures your photo on your phone: how much of the frame is sky,
-which cloud genus it is, and the outline of the largest cloud. Only those
-numbers — and a 64×64 one-bit silhouette of that outline — are ever sent
-anywhere. The photo itself stays with you.</small></p>
-</div>
-
-<h2>What it actually does</h2>
-<ul>
-<li>Checks that the frame really is sky. A photo of a waterfall is politely declined.</li>
-<li>Classifies the cloud genus from measured texture, cover and light: cumulus,
-    cirrus, stratus, stratocumulus, altocumulus, cumulonimbus.</li>
-<li>Traces the real outline of your cloud and draws it back onto your photo.</li>
-<li>If the sky offers no figure, Skry says so instead of inventing one.</li>
-<li>Works offline. Every reading is available with no connection at all.</li>
-</ul>
-
-<h2>For reflection, not advice</h2>
-<p>Skry is for entertainment and reflection. It never comments on health,
-death, pregnancy, money, legal matters or exam results — and it does not
-predict the future.</p>
-
-<nav>
-  <a href="privacy.html">Privacy</a>
-  <a href="terms.html">Terms</a>
-  <a href="mailto:brkekahraman@icloud.com">Support</a>
-</nav>
-<p><small>© 2026 Berke Kahraman</small></p>
-</main></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sky readings &amp; journal — Skry</title>
+    <meta
+      name="description"
+      content="Turn your sky photo into a personal reflection. Keep a private sky journal, explore clouds, and share a card on your terms."
+    />
+    <link rel="canonical" href="https://berkemd.github.io/skry/" />
+    <meta name="theme-color" content="#101727" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sky readings &amp; journal — Skry" />
+    <meta
+      property="og:description"
+      content="Turn your sky photo into a personal reflection. Keep a private sky journal, explore clouds, and share a card on your terms."
+    />
+    <meta property="og:url" content="https://berkemd.github.io/skry/" />
+    <meta name="twitter:card" content="summary" />
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #101727;
+        color: #e9edf4;
+        font:
+          17px/1.75 system-ui,
+          sans-serif;
+      }
+      main {
+        max-width: 720px;
+        margin: auto;
+        padding: 64px 24px 80px;
+      }
+      h1 {
+        font:
+          500 clamp(38px, 8vw, 60px) / 1.12 Georgia,
+          serif;
+        letter-spacing: -0.035em;
+        margin: 24px 0;
+      }
+      h2 {
+        font-size: 22px;
+        color: #f3cd7c;
+        margin: 40px 0 12px;
+      }
+      p,
+      li {
+        color: #c5cedd;
+      }
+      a {
+        color: #f3cd7c;
+      }
+      a:focus-visible {
+        outline: 3px solid #fff;
+        outline-offset: 5px;
+      }
+      .eyebrow {
+        font-size: 13px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #f3cd7c;
+      }
+      .lede {
+        font-size: 21px;
+      }
+      .cta {
+        display: inline-block;
+        padding: 12px 22px;
+        border-radius: 12px;
+        background: #f3cd7c;
+        color: #101727;
+        text-decoration: none;
+        font-weight: 650;
+        margin: 12px 0;
+      }
+      .card {
+        padding: 24px;
+        border: 1px solid #354056;
+        border-radius: 20px;
+        margin: 24px 0;
+      }
+      nav {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        margin-top: 48px;
+        border-top: 1px solid #354056;
+        padding-top: 24px;
+        font-size: 15px;
+      }
+      li {
+        margin: 10px 0;
+      }
+      hr {
+        border: 0;
+        border-top: 1px solid #354056;
+        margin: 48px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a href="index.html" class="eyebrow">Skry · Sky readings &amp; journal</a>
+      <h1>Notice a sky.<br />Keep a thought.</h1>
+      <p class="lede">
+        Your own sky photo, a personal reflection, and a quiet place to return
+        to it.
+      </p>
+      <a class="cta" href="https://apps.apple.com/app/id6790419436"
+        >Explore Skry on the App Store</a
+      >
+      <p>
+        <small
+          >For iPhone · A free daily reading · Optional Skry+ and reading
+          credits</small
+        >
+      </p>
+      <section class="card">
+        <h2>Coming in Skry 1.5</h2>
+        <p>
+          Choose a focus — relationships, work, rest or an open perspective. Add
+          a zodiac sign if you like. Your photo and the approximate Moon phase
+          help shape a creative prompt, with an explanation of the inputs.
+        </p>
+        <p>
+          These are symbolic perspectives for reflection, not predictions about
+          your future or personality.
+        </p>
+      </section>
+      <h2>A moment with somewhere to go</h2>
+      <ol>
+        <li>
+          Photograph the sky or choose a photo. Analysis stays on your iPhone.
+        </li>
+        <li>
+          Read, then add your own private note. Your journal keeps the photo and
+          its original reading together.
+        </li>
+        <li>
+          Compare your observation with a guide to the 10 main cloud genera.
+          “Not sure” is a valid observation; automatic suggestions may be wrong.
+        </li>
+        <li>
+          Preview a post, story or square card. Share your chosen card and an
+          App Store link, while private notes stay private.
+        </li>
+      </ol>
+      <h2>Keep it personal</h2>
+      <p>
+        No account, birth time, birth date or location is required. Version 1.5
+        writes readings on your device and does not upload your photo or
+        preferences. Sharing only happens when you choose it.
+      </p>
+      <h2>Start with the free daily reading</h2>
+      <p>
+        The first successful reading each day is free. In 1.5, the personal
+        reflection, observation guide, journal notes and sharing are included.
+        Skry+ adds unlimited readings, all reading sections and the option to
+        remove the card signature. Credits offer an alternative without a
+        subscription.
+      </p>
+      <p>
+        The App Store shows current prices, trial eligibility and availability
+        before purchase. Subscriptions renew automatically unless canceled. Skry
+        is for reflection and entertainment; its suggestions are not weather
+        forecasts or safety advice.
+      </p>
+      <hr />
+      <section lang="tr">
+        <h2>Göğe bak. Bir düşünceyi sakla.</h2>
+        <p>
+          Kendi gökyüzü fotoğrafın, kişisel bir yorum ve tekrar dönebileceğin
+          sakin bir günlük. Skry 1.5 ile odak ve isteğe bağlı burç seçimi, 10
+          bulut cinsini karşılaştırma rehberi, özel notlar ve gönderi, hikâye,
+          kare paylaşım kartları geliyor.
+        </p>
+        <p>
+          İlk başarılı günlük okuma ücretsizdir. Yorumlar sembolik düşünme
+          önerileridir; gelecek tahmini değildir. Fotoğrafın ve tercihlerin
+          cihazında kalır; paylaşım kararını sen verirsin.
+        </p>
+      </section>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a><a href="support.html">Support</a
+        ><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a>
+      </nav>
+      <p><small>© 2026 Berke Kahraman</small></p>
+    </main>
+  </body>
+</html>
