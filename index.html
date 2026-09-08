@@ -18,6 +18,11 @@
     />
     <meta property="og:url" content="https://berkemd.github.io/skry/" />
     <meta name="twitter:card" content="summary" />
+    <meta
+      property="og:image"
+      content="https://berkemd.github.io/skry/assets/share-card.png"
+    />
+    <meta property="og:image:alt" content="A real Skry share-card preview" />
     <style>
       :root {
         color-scheme: dark;
@@ -103,6 +108,38 @@
         border-top: 1px solid #354056;
         margin: 48px 0;
       }
+
+      .screens {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+        margin: 28px 0;
+      }
+      .screens figure {
+        margin: 0;
+        min-width: 0;
+      }
+      .screens img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 1px solid #354056;
+        border-radius: 18px;
+      }
+      .screens figcaption {
+        font-size: 14px;
+        margin-top: 12px;
+        color: #c5cedd;
+      }
+      @media (max-width: 520px) {
+        .screens {
+          grid-template-columns: 1fr;
+        }
+        .screens figure {
+          max-width: 330px;
+          margin: auto;
+        }
+      }
     </style>
   </head>
   <body>
@@ -123,7 +160,7 @@
         >
       </p>
       <section class="card">
-        <h2>Coming in Skry 1.5</h2>
+        <h2>Make it your own in Skry 1.5</h2>
         <p>
           Choose a focus — relationships, work, rest or an open perspective. Add
           a zodiac sign if you like. Your photo and the approximate Moon phase
@@ -133,6 +170,47 @@
           These are symbolic perspectives for reflection, not predictions about
           your future or personality.
         </p>
+      </section>
+      <section aria-labelledby="screens-title">
+        <h2 id="screens-title">See what you will make</h2>
+        <p>
+          Actual Skry 1.5 screens with a demonstration reading. Open an image to
+          see the full-size screen.
+        </p>
+        <div class="screens">
+          <figure>
+            <a
+              href="assets/personal-reading.png"
+              aria-label="Open the full-size personal reading screen"
+              ><img
+                src="assets/personal-reading.png"
+                width="1320"
+                height="2868"
+                loading="lazy"
+                decoding="async"
+                alt="A personal sky reflection with an explanation of the selected focus, zodiac sign and Moon phase"
+            /></a>
+            <figcaption>
+              A personal reflection, with its inputs explained.
+            </figcaption>
+          </figure>
+          <figure>
+            <a
+              href="assets/share-card.png"
+              aria-label="Open the full-size share card screen"
+              ><img
+                src="assets/share-card.png"
+                width="1320"
+                height="2868"
+                loading="lazy"
+                decoding="async"
+                alt="Post, story and square card preview controls with a separate Share card button"
+            /></a>
+            <figcaption>
+              A card you choose to share. Your journal notes stay private.
+            </figcaption>
+          </figure>
+        </div>
       </section>
       <h2>A moment with somewhere to go</h2>
       <ol>
@@ -154,17 +232,16 @@
       </ol>
       <h2>Keep it personal</h2>
       <p>
-        No account, birth time, birth date or location is required. Version 1.5
-        writes readings on your device and does not upload your photo or
-        preferences. Sharing only happens when you choose it.
+        No account, birth time, birth date or location is required. Skry writes
+        readings on your device and does not upload your photo or preferences.
+        Sharing only happens when you choose it.
       </p>
       <h2>Start with the free daily reading</h2>
       <p>
-        The first successful reading each day is free. In 1.5, the personal
-        reflection, observation guide, journal notes and sharing are included.
-        Skry+ adds unlimited readings, all reading sections and the option to
-        remove the card signature. Credits offer an alternative without a
-        subscription.
+        The first successful reading each day is free. The personal reflection,
+        observation guide, journal notes and sharing are included. Skry+ adds
+        unlimited readings, all reading sections and the option to remove the
+        card signature. Credits offer an alternative without a subscription.
       </p>
       <p>
         The App Store shows current prices, trial eligibility and availability
@@ -179,7 +256,7 @@
           Kendi gökyüzü fotoğrafın, kişisel bir yorum ve tekrar dönebileceğin
           sakin bir günlük. Skry 1.5 ile odak ve isteğe bağlı burç seçimi, 10
           bulut cinsini karşılaştırma rehberi, özel notlar ve gönderi, hikâye,
-          kare paylaşım kartları geliyor.
+          kare paylaşım kartları kullanımına hazır.
         </p>
         <p>
           İlk başarılı günlük okuma ücretsizdir. Yorumlar sembolik düşünme
